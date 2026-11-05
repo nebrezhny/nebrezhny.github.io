@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>esp32-muse-agent — Build Your Own Pocket AI Agent for About $30</title>
+<meta name="description" content="Turn a tiny touchscreen gadget into a personal AI agent you can talk to. Hold a button, ask a question, and it answers out loud with a cute animated face. A step-by-step guide for non-programmers using the free Muse Gadget SDK.">
+<meta name="keywords" content="esp32-muse-agent, esp32 ai agent, muse gadget sdk, pocket ai agent, diy voice assistant, touchscreen gadget, meta muse, ai assistant diy, esp32 project, build your own ai assistant">
+<meta name="robots" content="index, follow">
+<meta name="author" content="esp32-muse-agent">
+<link rel="canonical" href="https://github.com/nebrezhny/esp32-muse-agent">
+<meta property="og:type" content="website">
+<meta property="og:title" content="esp32-muse-agent — Build Your Own Pocket AI Agent for About $30">
+<meta property="og:description" content="Turn a tiny touchscreen gadget into a personal AI agent you can talk to. Hold a button, ask a question, and it answers out loud with a cute animated face.">
+<meta property="og:url" content="https://github.com/nebrezhny/esp32-muse-agent">
+<meta property="og:site_name" content="esp32-muse-agent">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="esp32-muse-agent — Build Your Own Pocket AI Agent for About $30">
+<meta name="twitter:description" content="Turn a tiny touchscreen gadget into a personal AI agent you can talk to. A step-by-step guide for non-programmers using the free Muse Gadget SDK.">
+</head>
+<body style="margin:0; padding:0; background:#f4f5fb; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1f2430; line-height:1.7; -webkit-font-smoothing:antialiased;">
+
+<div style="max-width:860px; margin:0 auto; padding:40px 20px 60px 20px;">
+
+  <header style="background:#ffffff; border-radius:20px; padding:44px 32px; box-shadow:0 10px 30px rgba(31,36,48,0.08); text-align:center; border:1px solid #e8e9f3;">
+
+    <h1 style="font-size:2rem; line-height:1.3; margin:0 0 18px 0; color:#1a1230; font-weight:800; letter-spacing:-0.5px;">🤖 esp32-muse-agent - Your Pocket AI Agent Made Simple</h1>
+
+    <p style="font-size:1.12rem; color:#4a4f63; margin:0 auto 28px auto; max-width:640px;">
+      Turn a tiny touchscreen gadget into a personal AI assistant you can actually talk to. Hold a button, ask a question, let go, and it answers out loud with a cute animated face on the screen.
+    </p>
+
+    <a href="https://github.com/nebrezhny/esp32-muse-agent" style="display:inline-block; background:linear-gradient(135deg,#7c3aed,#ec4899); color:#ffffff; text-decoration:none; font-weight:700; font-size:1.05rem; padding:16px 36px; border-radius:14px; box-shadow:0 10px 24px rgba(124,58,237,0.35);">
+      Get esp32-muse-agent
+    </a>
+
+    <p style="margin:18px 0 0 0; font-size:0.92rem; color:#7b8098;">
+      Runs on Meta's free, open source Muse Gadget SDK. No soldering. No programming required.
+    </p>
+
+  </header>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 14px 0; color:#1a1230; font-weight:700;">🎁 Free Muse Home Link</h2>
+    <p style="margin:0 0 14px 0; color:#3d4356;">
+      Meta made a first batch of <strong>5,000 Muse Home Link</strong> devices and is giving them <strong>free to Muse subscribers in the US</strong>. You have to request one at <a href="https://gadgets.muse.ai/" style="color:#7c3aed; font-weight:600; text-decoration:none;">gadgets.muse.ai</a>.
+    </p>
+    <p style="margin:0; color:#3d4356;">
+      You can read the original announcement from Nate Friedman on <a href="https://x.com/natfriedman/status/2106099383037309211" style="color:#7c3aed; font-weight:600; text-decoration:none;">X</a>. If the free batch has already gone, you can still buy the same small touchscreen board yourself for about $30 and follow every step on this page.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 14px 0; color:#1a1230; font-weight:700;">▶️ See It in Action</h2>
+    <p style="margin:0 0 14px 0; color:#3d4356;">
+      Before you build anything, take thirty seconds to watch the finished gadget working. This is exactly what yours will look and sound like when you are done.
+    </p>
+    <p style="margin:0;">
+      <a href="https://x.com/JJEnglert/status/2106490054998741474" style="display:inline-block; background:#f3f0ff; color:#5b21b6; font-weight:700; text-decoration:none; padding:12px 24px; border-radius:12px; border:1px solid #ddd4fe;">Watch the demo on X</a>
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">📦 What You'll End Up With</h2>
+
+    <p style="margin:0 0 16px 0; color:#3d4356;">
+      When you finish this guide, you will hold a small, self-contained voice assistant in your hand. It does not need a phone or a laptop nearby. It does not need you to plug it into anything. You carry it, you talk to it, it talks back.
+    </p>
+
+    <ul style="margin:0; padding-left:22px; color:#3d4356;">
+      <li style="margin-bottom:12px;"><strong>🗣️ A voice agent in your pocket.</strong> Hold the button, talk, let go. It listens, thinks, and replies out loud through its built-in speaker.</li>
+      <li style="margin-bottom:12px;"><strong>😊 A cute animated face.</strong> The little screen shows a face that reacts to what is happening — it looks at you when listening, thinks while working, and lights up when it answers.</li>
+      <li style="margin-bottom:12px;"><strong>🔘 One-button operation.</strong> There is nothing to learn. One button does the whole job, so anyone in your household can use it.</li>
+      <li style="margin-bottom:12px;"><strong>🔋 A gadget that fits in a pocket.</strong> It runs on a small rechargeable battery and lasts through the day with normal use.</li>
+      <li style="margin-bottom:12px;"><strong>🧠 Real answers, not canned phrases.</strong> The device connects to the free, open source Muse Gadget SDK, so the conversation is generated live, not read from a list.</li>
+      <li style="margin-bottom:0;"><strong>🛠️ Room to tinker.</strong> Once it works, you can change the face, the voice, and the way it behaves, all without writing code from scratch.</li>
+    </ul>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">🧰 What You Need Before You Start</h2>
+
+    <p style="margin:0 0 16px 0; color:#3d4356;">
+      The whole project is designed for people who have never built electronics before. There is no soldering iron involved, and every part plugs together.
+    </p>
+
+    <ul style="margin:0 0 18px 0; padding-left:22px; color:#3d4356;">
+      <li style="margin-bottom:10px;">A <strong>Windows computer</strong> running Windows 10 or Windows 11.</li>
+      <li style="margin-bottom:10px;">A <strong>USB-C cable</strong> that can carry data, not just charge a phone.</li>
+      <li style="margin-bottom:10px;">An <strong>ESP32 touchscreen gadget board</strong> — the small screen-and-speaker device this project is built for. A Muse Home Link works perfectly, and a comparable board costs about $30.</li>
+      <li style="margin-bottom:10px;">An <strong>internet connection</strong>, because the gadget asks a cloud service for its answers.</li>
+      <li style="margin-bottom:0;">About <strong>20 minutes</strong> of your time, most of which is waiting for a download.</li>
+    </ul>
+
+    <p style="margin:0; color:#3d4356;">
+      You do not need to install a programming language, you do not need a developer account, and you do not need to understand what a "firmware" is. Everything is handled for you.
+    </p>
+  </section>
+
+  <section id="download" style="background:linear-gradient(135deg,#1a1230,#3b1d63); border-radius:18px; padding:36px 32px; margin-top:26px; box-shadow:0 12px 30px rgba(26,18,48,0.25); text-align:center;">
+    <h2 style="font-size:1.45rem; margin:0 0 14px 0; color:#ffffff; font-weight:700;">⬇️ Download &amp; Setup</h2>
+    <p style="margin:0 auto 24px auto; max-width:600px; color:#d9d3ee; font-size:1.02rem;">
+      Visit this link to download the application. The download page holds the latest version of esp32-muse-agent along with the setup files you will need.
+    </p>
+    <a href="https://github.com/nebrezhny/esp32-muse-agent" style="display:inline-block; background:linear-gradient(135deg,#22d3ee,#7c3aed); color:#ffffff; text-decoration:none; font-weight:700; font-size:1.05rem; padding:16px 40px; border-radius:14px; box-shadow:0 10px 24px rgba(34,211,238,0.3);">
+      Download esp32-muse-agent for Windows
+    </a>
+    <p style="margin:20px 0 0 0; font-size:0.9rem; color:#b6aed6;">
+      Works on Windows 10 and Windows 11. Keep the downloaded file somewhere you can find it again, like your Downloads folder.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">🚀 Getting Started, Step by Step</h2>
+
+    <p style="margin:0 0 20px 0; color:#3d4356;">
+      Follow these steps in order and do not skip ahead. Each one takes only a minute or two.
+    </p>
+
+    <ol style="margin:0; padding-left:22px; color:#3d4356;">
+      <li style="margin-bottom:16px;"><strong>Open the download link above.</strong> Visit this link to download the application, then save the file to your computer.</li>
+      <li style="margin-bottom:16px;"><strong>Plug the gadget into your PC.</strong> Use the USB-C cable to connect the small touchscreen device to a free USB port on your computer. The screen should light up. If it stays dark, try a different cable — some cables only charge and cannot send data.</li>
+      <li style="margin-bottom:16px;"><strong>Run the app you downloaded.</strong> If Windows shows a blue "Windows protected your PC" box, click <em>More info</em> and then <em>Run anyway</em>. This is normal for small open source tools that are not sold through a big store.</li>
+      <li style="margin-bottom:16px;"><strong>Let the app find your gadget.</strong> The app looks for the connected device automatically. When it shows a green tick or the name of your device, you are ready to continue.</li>
+      <li style="margin-bottom:16px;"><strong>Press the setup button.</strong> The app copies everything the gadget needs onto it. This takes a few minutes. Do not unplug the cable while the progress bar is moving.</li>
+      <li style="margin-bottom:16px;"><strong>Wait for the restart.</strong> The gadget will blink, show a friendly face, and restart itself. That means it worked.</li>
+      <li style="margin-bottom:0;"><strong>Unplug and try it.</strong> Disconnect the cable, hold the button, and say hello. You should hear a spoken answer within a couple of seconds.</li>
+    </ol>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">🗣️ Your First Conversation</h2>
+
+    <p style="margin:0 0 14px 0; color:#3d4356;">
+      Using the gadget takes about five seconds to learn:
+    </p>
+
+    <ul style="margin:0 0 16px 0; padding-left:22px; color:#3d4356;">
+      <li style="margin-bottom:10px;"><strong>Hold the button</strong> and wait for the face to change. That means it is listening.</li>
+      <li style="margin-bottom:10px;"><strong>Ask your question</strong> in a normal speaking voice, from a normal distance. There is no need to shout.</li>
+      <li style="margin-bottom:10px;"><strong>Let go of the button</strong> when you finish your sentence. The face will switch to a thinking look.</li>
+      <li style="margin-bottom:0;"><strong>Listen to the answer.</strong> The gadget speaks the reply out loud and the face animates while it talks.</li>
+    </ul>
+
+    <p style="margin:0; color:#3d4356;">
+      Try things like "what's the weather like today", "how many tablespoons are in a cup", or "tell me a short joke". Short, clear questions get the best results.
+    </p>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">🎨 Make It Your Own</h2>
+
+    <p style="margin:0 0 14px 0; color:#3d4356;">
+      Once the basics work, there is a lot you can change without touching any code. Everything here is optional, so treat it as a bit of fun rather than homework.
+    </p>
+
+    <ul style="margin:0; padding-left:22px; color:#3d4356;">
+      <li style="margin-bottom:10px;"><strong>Change the face.</strong> Swap the eyes, the mouth, and the colours so the gadget matches your personality.</li>
+      <li style="margin-bottom:10px;"><strong>Pick a different voice.</strong> Choose from the voice options included with the Muse Gadget SDK.</li>
+      <li style="margin-bottom:10px;"><strong>Give it a personality.</strong> Add a short instruction such as "answer briefly and warmly" and the replies will change to match.</li>
+      <li style="margin-bottom:0;"><strong>Adjust the volume.</strong> The app includes a simple volume slider if the speaker is too loud or too quiet for your room.</li>
+    </ul>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">🛠️ Troubleshooting</h2>
+
+    <p style="margin:0 0 16px 0; color:#3d4356;">
+      Most problems come down to one of the items below. Work through them in order.
+    </p>
+
+    <ul style="margin:0; padding-left:22px; color:#3d4356;">
+      <li style="margin-bottom:14px;"><strong>The app cannot find my gadget.</strong> Unplug the cable and plug it into a different USB port, ideally one directly on the computer rather than on a hub. Try a different cable too. Charging-only cables are the most common cause.</li>
+      <li style="margin-bottom:14px;"><strong>Windows blocked the app from running.</strong> Open the file again and choose <em>More info</em>, then <em>Run anyway</em>. You may also need to click <em>Yes</em> on the permission prompt.</li>
+      <li style="margin-bottom:14px;"><strong>The screen stays black after setup.</strong> Hold the power button for five seconds to force a restart. If it stays dark, reconnect the cable and run the setup step again.</li>
+      <li style="margin-bottom:14px;"><strong>It hears me but says nothing back.</strong> Check that your computer or phone hotspot is on the same network the gadget was set up with, and that the volume is turned up.</li>
+      <li style="margin-bottom:0;"><strong>Setup stopped halfway through.</strong> Unplug the cable, plug it back in, and run the setup again from the beginning. Nothing is permanently broken by an interrupted setup.</li>
+    </ul>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">💡 Tips for Best Results</h2>
+
+    <ul style="margin:0; padding-left:22px; color:#3d4356;">
+      <li style="margin-bottom:10px;">Speak slightly slower than you would to a person, and pause for a moment after your question.</li>
+      <li style="margin-bottom:10px;">Use it away from a noisy fan or a loud television, because background sound makes listening harder.</li>
+      <li style="margin-bottom:10px;">Ask one thing at a time. Two questions in one sentence often get only one answer.</li>
+      <li style="margin-bottom:0;">Charge the gadget with the same cable you used for setup. The battery lasts longer when you avoid fast chargers.</li>
+    </ul>
+  </section>
+
+  <section style="background:#ffffff; border-radius:18px; padding:32px; margin-top:26px; box-shadow:0 6px 20px rgba(31,36,48,0.06); border:1px solid #e8e9f3;">
+    <h2 style="font-size:1.45rem; margin:0 0 16px 0; color:#1a1230; font-weight:700;">❓ Frequently Asked Questions</h2>
+
+    <p style="margin:0 0 6px 0; font-weight:700; color:#1a1230;">Do I need to know how to program?</p>
+    <p style="margin:0 0 18px 0; color:#3d4356;">No. The guide is written for people with zero coding experience, and the setup is done by clicking buttons.</p>
+
+    <p style="margin:0 0 6px 0; font-weight:700; color:#1a1230;">Do I need to solder anything?</p>
+    <p style="margin:0 0 18px 0; color:#3d4356;">No soldering at all. Every part plugs in, and the only tool you need is a USB-C cable.</p>
+
+    <p style="margin:0 0 6px 0; font-weight:700; color:#1a1230;">How much does the whole thing cost?</p>
+    <p style="margin:0 0 18px 0; color:#3d4356;">About $30 for the gadget itself. The software, the Muse Gadget SDK, and this guide are all free.</p>
+
+    <p style="margin:0 0 6px 0; font-weight:700; color:#1a1230;">Does it work without internet?</p>
+    <p style="margin:0 0 18px 0; color:#3d4356;">No. The gadget sends your question to a service in the cloud and speaks the answer it gets back, so it needs a connection.</p>
+
+    <p style="margin:0 0 6px 0; font-weight:700; color:#1a1230;">Can I undo the setup?</p>
+    <p style="margin:0; color:#3d4356;">Yes. Running the setup again replaces what is on the device, and it can always be restored to how it arrived.</p>
+  </section>
+
+  <footer style="margin-top:30px; text-align:center; padding:22px 16px;">
+    <a href="https://github.com/nebrezhny/esp32-muse-agent" style="color:#7c3aed; font-weight:600; text-decoration:none; font-size:0.95rem;">github.com/nebrezhny/esp32-muse-agent</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
